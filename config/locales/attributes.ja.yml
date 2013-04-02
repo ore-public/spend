@@ -1,0 +1,7 @@
+ja:
+  activerecord:
+    attributes:
+      content:
+        title: 講座名
+        description: 講座詳細
+        youtube_url: 動画埋め込みコード

@@ -1,0 +1,5 @@
+#!/bin/sh
+
+set -e
+ln -s /home/sqale/etc/database.yml /home/sqale/current/config/database.yml
+cd /home/sqale/current && bundle exec rake assets:precompile
