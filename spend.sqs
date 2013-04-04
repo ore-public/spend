@@ -41,6 +41,14 @@
             <didChangeNameDuringValidation><![CDATA[0]]></didChangeNameDuringValidation>
             <uid><![CDATA[1121B4DB-4789-4AF3-963E-47F31183906B]]></uid>
         </SQLField>
+        <SQLField>
+            <name><![CDATA[approval]]></name>
+            <type><![CDATA[string]]></type>
+            <didChangeNameDuringValidation><![CDATA[0]]></didChangeNameDuringValidation>
+            <objectComment><![CDATA[必要
+不要]]></objectComment>
+            <uid><![CDATA[F7B720E8-8C4A-4AA8-8337-AA3A83C7DD1A]]></uid>
+        </SQLField>
         <didChangeNameDuringValidation><![CDATA[0]]></didChangeNameDuringValidation>
         <labelWindowIndex><![CDATA[1]]></labelWindowIndex>
         <temporaryOriginalName><![CDATA[Table6]]></temporaryOriginalName>
@@ -149,6 +157,15 @@
             <referencesTableUID><![CDATA[FB532C96-7350-4F45-8D1A-43024A09C988]]></referencesTableUID>
             <didChangeNameDuringValidation><![CDATA[0]]></didChangeNameDuringValidation>
             <uid><![CDATA[0B924F75-05BB-4A3D-BD0F-4C983BA99DF0]]></uid>
+        </SQLField>
+        <SQLField>
+            <name><![CDATA[status]]></name>
+            <type><![CDATA[string]]></type>
+            <didChangeNameDuringValidation><![CDATA[0]]></didChangeNameDuringValidation>
+            <objectComment><![CDATA[購読中
+申込中
+否認]]></objectComment>
+            <uid><![CDATA[82F9DA6B-348B-4FA1-89CC-F3C04DE99809]]></uid>
         </SQLField>
         <didChangeNameDuringValidation><![CDATA[0]]></didChangeNameDuringValidation>
         <labelWindowIndex><![CDATA[0]]></labelWindowIndex>
