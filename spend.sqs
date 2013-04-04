@@ -236,17 +236,6 @@
             <didChangeNameDuringValidation><![CDATA[0]]></didChangeNameDuringValidation>
             <uid><![CDATA[C38EFB40-B6AD-47E7-AC00-B2AC241BA175]]></uid>
         </SQLField>
-        <SQLField>
-            <name><![CDATA[role]]></name>
-            <type><![CDATA[string]]></type>
-            <defaultValue><![CDATA[user]]></defaultValue>
-            <didChangeNameDuringValidation><![CDATA[0]]></didChangeNameDuringValidation>
-            <objectComment><![CDATA[:user, :admin
-default value :user
-]]></objectComment>
-            <temporaryOriginalName><![CDATA[role]]></temporaryOriginalName>
-            <uid><![CDATA[394DFD8A-DBDF-43A8-B743-BAB1683113A7]]></uid>
-        </SQLField>
         <didChangeNameDuringValidation><![CDATA[0]]></didChangeNameDuringValidation>
         <labelWindowIndex><![CDATA[2]]></labelWindowIndex>
         <ui.treeExpanded><![CDATA[1]]></ui.treeExpanded>
