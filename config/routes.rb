@@ -1,4 +1,7 @@
 Spend::Application.routes.draw do
+  resources :collections
+
+
   resources :contents
 
 
