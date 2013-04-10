@@ -6,5 +6,6 @@ class Collection < ActiveRecord::Base
              foreign_key: 'user_id'
 
   has_many :contents
-
+  has_many :subscriptions
+  
 end
