@@ -1,9 +1,7 @@
 Spend::Application.routes.draw do
-  resources :collections
-
-
-  resources :contents
-
+  resources :collections do
+    resources :contents
+  end
 
   devise_for :users
 
