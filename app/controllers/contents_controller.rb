@@ -1,5 +1,5 @@
 class ContentsController < ApplicationController
-  before_filter :authenticate_user!, :except => [:index]
+  before_filter :authenticate_user!
   authorize_resource
 
   # GET /contents
