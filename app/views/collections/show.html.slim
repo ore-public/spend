@@ -5,7 +5,7 @@ div class="page-header"
 p
   strong= model_class.human_attribute_name(:user_id) + ':'
   br
-  = @collection.user_id
+  = render "owner_name", owner: @collection.owner
 p
   strong= model_class.human_attribute_name(:name) + ':'
   br
