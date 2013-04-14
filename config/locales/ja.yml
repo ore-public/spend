@@ -9,6 +9,7 @@ ja:
     logout: ログアウト
   menu:
     contents: 講義一覧
+    collections: 作品一覧
   cancan:
     error: 表示しようとしたページへのアクセス権限がありません
   date:
