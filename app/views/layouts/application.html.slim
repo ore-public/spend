@@ -35,6 +35,7 @@ html lang="ja"
                     = current_user.email
                     b.caret
                   ul.dropdown-menu role="menu" aria-labelledby="drop1"
+                    li= link_to t("menu.collections"), :collections
                     li= link_to t("auth.logout"), destroy_user_session_path, method: :delete
               - else
                 li= link_to raw('<i class="icon-user"></i>')+t("auth.login"), new_user_session_path
@@ -46,7 +47,7 @@ html lang="ja"
           .well.sidebar-nav
             ul.nav.nav-list
               li.nav-header Sidebar
-              li= link_to t("menu.collections"), :collections
+              li= link_to t("menu.readable_collections"), readable_collections_index_path
         .span9
           = bootstrap_flash
           = yield

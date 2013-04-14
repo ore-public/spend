@@ -4,7 +4,7 @@ class CollectionsController < ApplicationController
   # GET /collections
   # GET /collections.json
   def index
-    @collections = Collection.all
+    @collections = current_user.collections
 
     respond_to do |format|
       format.html # index.html.erb
@@ -15,7 +15,7 @@ class CollectionsController < ApplicationController
   # GET /collections/1
   # GET /collections/1.json
   def show
-    @collection = Collection.find(params[:id])
+    @collection = current_user.collections.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -26,8 +26,7 @@ class CollectionsController < ApplicationController
   # GET /collections/new
   # GET /collections/new.json
   def new
-    @collection = Collection.new
-    @collection.owner = current_user
+    @collection = current_user.collections.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -37,14 +36,13 @@ class CollectionsController < ApplicationController
 
   # GET /collections/1/edit
   def edit
-    @collection = Collection.find(params[:id])
+    @collection = current_user.collections.find(params[:id])
   end
 
   # POST /collections
   # POST /collections.json
   def create
-    @collection = Collection.new(params[:collection])
-    @collection.owner = current_user
+    @collection = current_user.collections.new(params[:collection])
 
     respond_to do |format|
       if @collection.save
@@ -60,8 +58,7 @@ class CollectionsController < ApplicationController
   # PUT /collections/1
   # PUT /collections/1.json
   def update
-    @collection = Collection.find(params[:id])
-    @collection.owner = current_user
+    @collection = current_user.collections.find(params[:id])
 
     respond_to do |format|
       if @collection.update_attributes(params[:collection])
@@ -77,7 +74,7 @@ class CollectionsController < ApplicationController
   # DELETE /collections/1
   # DELETE /collections/1.json
   def destroy
-    @collection = Collection.find(params[:id])
+    @collection = current_user.collections.find(params[:id])
     @collection.destroy
 
     respond_to do |format|

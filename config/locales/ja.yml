@@ -13,7 +13,8 @@ ja:
     logout: ログアウト
   menu:
     contents: 講義一覧
-    collections: 作品一覧
+    collections: 管理作品一覧
+    readable_collections: 購読可能な作品一覧
   cancan:
     error: 表示しようとしたページへのアクセス権限がありません
   date:

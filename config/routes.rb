@@ -1,4 +1,6 @@
 Spend::Application.routes.draw do
+  get "readable_collections/index"
+
   resources :collections do
     resources :contents
   end
