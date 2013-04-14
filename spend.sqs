@@ -178,8 +178,8 @@
         <name><![CDATA[users]]></name>
         <schema><![CDATA[]]></schema>
         <location>
-            <x>33.00</x>
-            <y>215.00</y>
+            <x>47.00</x>
+            <y>184.00</y>
         </location>
         <size>
             <width>214.00</width>
@@ -254,6 +254,13 @@
             <type><![CDATA[string]]></type>
             <didChangeNameDuringValidation><![CDATA[0]]></didChangeNameDuringValidation>
             <uid><![CDATA[C38EFB40-B6AD-47E7-AC00-B2AC241BA175]]></uid>
+        </SQLField>
+        <SQLField>
+            <name><![CDATA[name]]></name>
+            <type><![CDATA[string]]></type>
+            <didChangeNameDuringValidation><![CDATA[0]]></didChangeNameDuringValidation>
+            <temporaryOriginalName><![CDATA[name]]></temporaryOriginalName>
+            <uid><![CDATA[71B546D0-81B5-43C0-92CD-47477B401EB1]]></uid>
         </SQLField>
         <didChangeNameDuringValidation><![CDATA[0]]></didChangeNameDuringValidation>
         <labelWindowIndex><![CDATA[2]]></labelWindowIndex>
