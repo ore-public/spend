@@ -27,6 +27,7 @@ class CollectionsController < ApplicationController
   # GET /collections/new.json
   def new
     @collection = Collection.new
+    @collection.owner = current_user
 
     respond_to do |format|
       format.html # new.html.erb
@@ -43,6 +44,7 @@ class CollectionsController < ApplicationController
   # POST /collections.json
   def create
     @collection = Collection.new(params[:collection])
+    @collection.owner = current_user
 
     respond_to do |format|
       if @collection.save
@@ -59,6 +61,7 @@ class CollectionsController < ApplicationController
   # PUT /collections/1.json
   def update
     @collection = Collection.find(params[:id])
+    @collection.owner = current_user
 
     respond_to do |format|
       if @collection.update_attributes(params[:collection])

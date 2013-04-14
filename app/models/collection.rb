@@ -1,7 +1,7 @@
 class Collection < ActiveRecord::Base
   include Enumerize
 
-  attr_accessible :approval, :name, :user_id
+  attr_accessible :approval, :name, :user_id, :owner
 
   belongs_to :owner,
              class_name: 'User',
@@ -9,6 +9,8 @@ class Collection < ActiveRecord::Base
 
   has_many :contents
   has_many :subscriptions
+
+  validates :owner, presence: true
 
   enumerize :approval, in: [:necessary, :unnecessary]
 
