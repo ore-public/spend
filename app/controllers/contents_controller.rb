@@ -5,7 +5,7 @@ class ContentsController < ApplicationController
   # GET /contents
   # GET /contents.json
   def index
-    @contents = Content.all
+    @contents = Collection.find(params[:collection_id]).contents
 
     respond_to do |format|
       format.html # index.html.erb
@@ -16,7 +16,7 @@ class ContentsController < ApplicationController
   # GET /contents/1
   # GET /contents/1.json
   def show
-    @content = Content.find(params[:id])
+    @content = Collection.find(params[:collection_id]).contents.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -27,7 +27,7 @@ class ContentsController < ApplicationController
   # GET /contents/new
   # GET /contents/new.json
   def new
-    @content = Content.new
+    @content = Content.new(collection_id: params[:collection_id])
 
     respond_to do |format|
       format.html # new.html.erb
@@ -37,17 +37,18 @@ class ContentsController < ApplicationController
 
   # GET /contents/1/edit
   def edit
-    @content = Content.find(params[:id])
+    @content = Collection.find(params[:collection_id]).contents.find(params[:id])
   end
 
   # POST /contents
   # POST /contents.json
   def create
     @content = Content.new(params[:content])
+    @content.collection_id = params[:collection_id]
 
     respond_to do |format|
       if @content.save
-        format.html { redirect_to @content, notice: 'Content was successfully created.' }
+        format.html { redirect_to collection_content_url(@content.collection_id, @content), notice: 'Content was successfully created.' }
         format.json { render json: @content, status: :created, location: @content }
       else
         format.html { render action: "new" }
@@ -60,10 +61,11 @@ class ContentsController < ApplicationController
   # PUT /contents/1.json
   def update
     @content = Content.find(params[:id])
+    @content.collection_id = params[:collection_id]
 
     respond_to do |format|
       if @content.update_attributes(params[:content])
-        format.html { redirect_to @content, notice: 'Content was successfully updated.' }
+        format.html { redirect_to collection_content_url(@content.collection_id, @content), notice: 'Content was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -75,11 +77,11 @@ class ContentsController < ApplicationController
   # DELETE /contents/1
   # DELETE /contents/1.json
   def destroy
-    @content = Content.find(params[:id])
+    @content = Collection.find(params[:collection_id]).contents.find(params[:id])
     @content.destroy
 
     respond_to do |format|
-      format.html { redirect_to contents_url }
+      format.html { redirect_to collection_contents_url(params[:collection_id]) }
       format.json { head :no_content }
     end
   end
