@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.13'
+gem 'rails', '4.0.0.beta1'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -9,8 +9,8 @@ gem 'rails', '3.2.13'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+  gem 'sass-rails',   '~> 4.0.0.beta1'
+  gem 'coffee-rails', '~> 4.0.0.beta1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   gem 'therubyracer', :platforms => :ruby
@@ -32,15 +32,17 @@ end
 
 gem 'jquery-rails'
 gem "twitter-bootstrap-rails"
-gem 'devise'
+gem 'devise', git: 'https://github.com/plataformatec/devise.git', branch: 'rails4'
 gem 'cancan'
-gem 'simple_form'
 gem "rails_config"
 gem "active_decorator"
 gem "less-rails"
 gem 'slim-rails'
-gem 'simple_form'
-gem 'enumerize'
+gem "simple_form", "3.0.0.beta1"
+gem 'enumerize', :git => 'git@github.com:brainspec/enumerize.git', :branch => 'rails4'
+
+gem 'turbolinks'
+gem 'protected_attributes'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

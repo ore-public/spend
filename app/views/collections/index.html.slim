@@ -12,8 +12,8 @@ table class="table table-striped"
   tbody
     - @collections.each do |collection|
       tr
-        td= link_to collection.name, collection
-        td= render "owner_name", owner: collection.owner
+        td= link_to collection.name, collection_path(collection)
+        td= render partial: "owner_name", locals: {owner: collection.owner}
         td= collection.approval.text
         td=l collection.created_at
         td
@@ -22,3 +22,4 @@ table class="table table-striped"
           = link_to t('.destroy', :default => t("helpers.links.destroy")), collection_path(collection), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-mini btn-danger'
 
 = link_to t('.new', :default => t("helpers.links.new")), new_collection_path, :class => 'btn btn-primary'
+
