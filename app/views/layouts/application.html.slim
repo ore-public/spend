@@ -25,7 +25,7 @@ html lang="ja"
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          a.brand href="#"Spend
+          = link_to 'Spend', '/', class: 'brand'
           .container-fluid.nav-collapse
             ul.nav.pull-right
               - if signed_in?
