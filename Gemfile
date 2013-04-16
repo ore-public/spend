@@ -38,7 +38,7 @@ gem "rails_config"
 gem "active_decorator"
 gem "less-rails"
 gem 'slim-rails'
-gem 'simple_form', '3.0.0.beta1'
+gem "simple_form", "3.0.0.beta1"
 gem 'enumerize', :git => 'git@github.com:brainspec/enumerize.git', :branch => 'rails4'
 
 gem 'turbolinks'
