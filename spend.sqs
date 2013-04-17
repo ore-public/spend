@@ -66,8 +66,8 @@
         <name><![CDATA[contents]]></name>
         <schema><![CDATA[]]></schema>
         <location>
-            <x>602.00</x>
-            <y>324.00</y>
+            <x>593.00</x>
+            <y>384.00</y>
         </location>
         <size>
             <width>149.00</width>
@@ -430,10 +430,10 @@ hoaG
         <snapToGrid><![CDATA[0]]></snapToGrid>
         <SourceSidebarWidth><![CDATA[349.000000]]></SourceSidebarWidth>
         <uid><![CDATA[F3A8F10C-EBBC-47FD-943A-939A96960B44]]></uid>
-        <windowHeight><![CDATA[578.000000]]></windowHeight>
-        <windowLocationX><![CDATA[58.000000]]></windowLocationX>
-        <windowLocationY><![CDATA[168.000000]]></windowLocationY>
-        <windowWidth><![CDATA[1308.000000]]></windowWidth>
+        <windowHeight><![CDATA[746.000000]]></windowHeight>
+        <windowLocationX><![CDATA[49.000000]]></windowLocationX>
+        <windowLocationY><![CDATA[0.000000]]></windowLocationY>
+        <windowWidth><![CDATA[1317.000000]]></windowWidth>
     </SQLDocumentInfo>
     <AllowsIndexRenamingOnInsert><![CDATA[1]]></AllowsIndexRenamingOnInsert>
     <containerName><![CDATA[model controller orginal container]]></containerName>

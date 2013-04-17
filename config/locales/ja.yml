@@ -28,6 +28,9 @@ ja:
       index: 購読者一覧
       approve: 承認する
       reject: 否認する
+      message:
+        approve: 購読の承認を行いました
+        reject: 購読の否認を行いました
   cancan:
     error: 表示しようとしたページへのアクセス権限がありません
   date:
