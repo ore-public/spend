@@ -8,8 +8,8 @@ table.table.table-striped
       - unless subscription.status.read?
         td= link_to t("collections.subscriptions.approve"), \
             approve_collection_subscription_path(subscription.collection, subscription), \
-            method: "put", class: "btn"
+            method: "put", class: "btn btn-success"
       - else
         td= link_to t("collections.subscriptions.reject"), \
             reject_collection_subscription_path(subscription.collection, subscription), \
-            method: "put", class: "btn"
+            method: "put", class: "btn btn-danger"
