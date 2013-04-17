@@ -5,7 +5,7 @@ class ContentsController < ApplicationController
   # GET /contents
   # GET /contents.json
   def index
-    @contents = Collection.find(params[:collection_id]).contents
+    @contents = current_user.collections.find(params[:collection_id]).contents
 
     respond_to do |format|
       format.html # index.html.erb
@@ -16,7 +16,7 @@ class ContentsController < ApplicationController
   # GET /contents/1
   # GET /contents/1.json
   def show
-    @content = Collection.find(params[:collection_id]).contents.find(params[:id])
+    @content = current_user.collections.find(params[:collection_id]).contents.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -27,7 +27,7 @@ class ContentsController < ApplicationController
   # GET /contents/new
   # GET /contents/new.json
   def new
-    @content = Content.new(collection_id: params[:collection_id])
+    @content = current_user.collections.find(params[:collection_id]).contents.new(collection_id: params[:collection_id])
 
     respond_to do |format|
       format.html # new.html.erb
@@ -37,14 +37,13 @@ class ContentsController < ApplicationController
 
   # GET /contents/1/edit
   def edit
-    @content = Collection.find(params[:collection_id]).contents.find(params[:id])
+    @content = current_user.collections.find(params[:collection_id]).contents.find(params[:id])
   end
 
   # POST /contents
   # POST /contents.json
   def create
-    @content = Content.new(params[:content])
-    @content.collection_id = params[:collection_id]
+    @content = current_user.collections.find(params[:collection_id]).contents.new(params[:content])
 
     respond_to do |format|
       if @content.save
@@ -60,8 +59,7 @@ class ContentsController < ApplicationController
   # PUT /contents/1
   # PUT /contents/1.json
   def update
-    @content = Content.find(params[:id])
-    @content.collection_id = params[:collection_id]
+    @content = current_user.collections.find(params[:collection_id]).contents.find(params[:id])
 
     respond_to do |format|
       if @content.update_attributes(params[:content])
@@ -77,7 +75,7 @@ class ContentsController < ApplicationController
   # DELETE /contents/1
   # DELETE /contents/1.json
   def destroy
-    @content = Collection.find(params[:collection_id]).contents.find(params[:id])
+    @content = current_user.collections.find(params[:collection_id]).contents.find(params[:id])
     @content.destroy
 
     respond_to do |format|
