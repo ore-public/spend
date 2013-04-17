@@ -4,6 +4,12 @@ Spend::Application.routes.draw do
 
   resources :collections do
     resources :contents
+    resources :subscriptions, only: :index do
+      member do
+        put 'approve'
+        put 'reject'
+      end
+    end
   end
 
   devise_for :users

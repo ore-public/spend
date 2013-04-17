@@ -24,6 +24,10 @@ ja:
     read: 購読する
     message:
       request_read: 購読の申し込みを行いました
+    subscriptions:
+      index: 購読者一覧
+      approve: 承認する
+      reject: 否認する
   cancan:
     error: 表示しようとしたページへのアクセス権限がありません
   date:

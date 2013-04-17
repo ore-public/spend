@@ -1,0 +1,15 @@
+h1 Subscriptions#index
+
+table.table.table-striped
+  - @subscriptions.each do |subscription|
+    tr
+      td= render partial: "user_name", locals: {user: subscription.user}
+      td= subscription.status.text
+      - unless subscription.status.read?
+        td= link_to t("collections.subscriptions.approve"), \
+            approve_collection_subscription_path(subscription.collection, subscription), \
+            method: "put", class: "btn"
+      - else
+        td= link_to t("collections.subscriptions.reject"), \
+            reject_collection_subscription_path(subscription.collection, subscription), \
+            method: "put", class: "btn"
