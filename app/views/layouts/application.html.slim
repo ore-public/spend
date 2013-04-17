@@ -27,28 +27,25 @@ html lang="ja"
             span.icon-bar
           = link_to 'Spend', '/', class: 'brand'
           .container-fluid.nav-collapse
+            ul.nav
+              li= link_to t("menu.readable_collections"), readable_collections_index_path
             ul.nav.pull-right
               - if signed_in?
-                li.dropdown
-                  a.dropdown-toggle#drop1 href="#" role="button" data-toggle="dropdown"
-                    i.icon-user
-                    = current_user.email
-                    b.caret
-                  ul.dropdown-menu role="menu" aria-labelledby="drop1"
-                    li= link_to t("menu.collections"), :collections
-                    li= link_to t("auth.logout"), destroy_user_session_path, method: :delete
+                  li= link_to t("menu.collections"), :collections
+                  li.dropdown
+                    a.dropdown-toggle#drop1 href="#" role="button" data-toggle="dropdown"
+                      i.icon-user
+                      = current_user.email
+                      b.caret
+                    ul.dropdown-menu role="menu" aria-labelledby="drop1"
+                      li= link_to t("auth.logout"), destroy_user_session_path, method: :delete
               - else
                 li= link_to raw('<i class="icon-user"></i>')+t("auth.login"), new_user_session_path
 
     .container-fluid
 
       .row-fluid
-        .span3
-          .well.sidebar-nav
-            ul.nav.nav-list
-              li.nav-header Sidebar
-              li= link_to t("menu.readable_collections"), readable_collections_index_path
-        .span9
+        .span12
           = bootstrap_flash
           = yield
     
