@@ -11,9 +11,13 @@ p
   br
   = @collection.name
 p
+  strong= model_class.human_attribute_name(:description) + ':'
+  br
+  = @collection.description
+p
   strong= model_class.human_attribute_name(:approval) + ':'
   br
-  = @collection.approval
+  = @collection.approval.text
 
 .form-actions
   = link_to t('.back', :default => t("helpers.links.back")), collections_path, :class => 'btn'

@@ -1,2 +1,15 @@
 h1 ReadableCollections#index
 p Find me in app/views/readable_collections/index.html.slim
+
+table.table.table-striped
+
+  - @collections.each do |collection|
+    tr
+      td= collection.name
+      td= collection.description
+      - if collection.read?(current_user)
+        td= collection.subscription(current_user).status.text
+      - else
+        td= link_to t('collections.read'), \
+        {controller: 'readable_collections', action: 'read', id: collection}, \
+        method: "post", class: "btn btn-info"

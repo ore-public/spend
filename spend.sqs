@@ -9,7 +9,7 @@
         </location>
         <size>
             <width>200.00</width>
-            <height>100.00</height>
+            <height>120.00</height>
         </size>
         <zorder>2</zorder>
         <SQLField>
@@ -33,7 +33,6 @@
             <referencesTableUID><![CDATA[FB532C96-7350-4F45-8D1A-43024A09C988]]></referencesTableUID>
             <didChangeNameDuringValidation><![CDATA[0]]></didChangeNameDuringValidation>
             <forcedUnique><![CDATA[0]]></forcedUnique>
-            <temporaryOriginalName><![CDATA[owner]]></temporaryOriginalName>
             <uid><![CDATA[DF408B30-F96A-4A37-A72D-8681F6D71DBF]]></uid>
         </SQLField>
         <SQLField>
@@ -48,8 +47,14 @@
             <didChangeNameDuringValidation><![CDATA[0]]></didChangeNameDuringValidation>
             <objectComment><![CDATA[必要
 不要]]></objectComment>
-            <temporaryOriginalName><![CDATA[approval]]></temporaryOriginalName>
             <uid><![CDATA[F7B720E8-8C4A-4AA8-8337-AA3A83C7DD1A]]></uid>
+        </SQLField>
+        <SQLField>
+            <name><![CDATA[description]]></name>
+            <type><![CDATA[text]]></type>
+            <didChangeNameDuringValidation><![CDATA[0]]></didChangeNameDuringValidation>
+            <temporaryOriginalName><![CDATA[id_1]]></temporaryOriginalName>
+            <uid><![CDATA[04A38818-AD1E-43DA-8638-095743722146]]></uid>
         </SQLField>
         <didChangeNameDuringValidation><![CDATA[0]]></didChangeNameDuringValidation>
         <labelWindowIndex><![CDATA[1]]></labelWindowIndex>
@@ -178,8 +183,8 @@
         <name><![CDATA[users]]></name>
         <schema><![CDATA[]]></schema>
         <location>
-            <x>47.00</x>
-            <y>184.00</y>
+            <x>33.00</x>
+            <y>215.00</y>
         </location>
         <size>
             <width>214.00</width>
@@ -254,13 +259,6 @@
             <type><![CDATA[string]]></type>
             <didChangeNameDuringValidation><![CDATA[0]]></didChangeNameDuringValidation>
             <uid><![CDATA[C38EFB40-B6AD-47E7-AC00-B2AC241BA175]]></uid>
-        </SQLField>
-        <SQLField>
-            <name><![CDATA[name]]></name>
-            <type><![CDATA[string]]></type>
-            <didChangeNameDuringValidation><![CDATA[0]]></didChangeNameDuringValidation>
-            <temporaryOriginalName><![CDATA[name]]></temporaryOriginalName>
-            <uid><![CDATA[71B546D0-81B5-43C0-92CD-47477B401EB1]]></uid>
         </SQLField>
         <didChangeNameDuringValidation><![CDATA[0]]></didChangeNameDuringValidation>
         <labelWindowIndex><![CDATA[2]]></labelWindowIndex>
@@ -430,12 +428,12 @@ hoaG
         <PageGridVisible><![CDATA[0]]></PageGridVisible>
         <sidebarIndex><![CDATA[0]]></sidebarIndex>
         <snapToGrid><![CDATA[0]]></snapToGrid>
-        <SourceSidebarWidth><![CDATA[352.000000]]></SourceSidebarWidth>
+        <SourceSidebarWidth><![CDATA[349.000000]]></SourceSidebarWidth>
         <uid><![CDATA[F3A8F10C-EBBC-47FD-943A-939A96960B44]]></uid>
-        <windowHeight><![CDATA[746.000000]]></windowHeight>
-        <windowLocationX><![CDATA[55.000000]]></windowLocationX>
-        <windowLocationY><![CDATA[0.000000]]></windowLocationY>
-        <windowWidth><![CDATA[1311.000000]]></windowWidth>
+        <windowHeight><![CDATA[578.000000]]></windowHeight>
+        <windowLocationX><![CDATA[58.000000]]></windowLocationX>
+        <windowLocationY><![CDATA[168.000000]]></windowLocationY>
+        <windowWidth><![CDATA[1308.000000]]></windowWidth>
     </SQLDocumentInfo>
     <AllowsIndexRenamingOnInsert><![CDATA[1]]></AllowsIndexRenamingOnInsert>
     <containerName><![CDATA[model controller orginal container]]></containerName>

@@ -41,6 +41,7 @@ gem "less-rails"
 gem 'slim-rails'
 gem 'simple_form'
 gem 'enumerize'
+gem 'rails-i18n'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

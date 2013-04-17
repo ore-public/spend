@@ -1,5 +1,6 @@
 Spend::Application.routes.draw do
   get "readable_collections/index"
+  post "readable_collections/read"
 
   resources :collections do
     resources :contents

@@ -8,6 +8,11 @@ ja:
       role:
         user: 一般ユーザー
         admin: 管理者
+    subscription:
+      status:
+        read: 購読中
+        offer: 申込中
+        reject: 却下
   auth:
     login: ログイン
     logout: ログアウト
@@ -15,6 +20,10 @@ ja:
     contents: 講義一覧
     collections: 管理作品一覧
     readable_collections: 購読可能な作品一覧
+  collections:
+    read: 購読する
+    message:
+      request_read: 購読の申し込みを行いました
   cancan:
     error: 表示しようとしたページへのアクセス権限がありません
   date:
@@ -216,11 +225,3 @@ ja:
       long: ! '%Y年%m月%d日(%a) %H時%M分%S秒 %z'
       short: ! '%y/%m/%d %H:%M'
     pm: 午後
-  # remove these aliases after 'activemodel' and 'activerecord' namespaces are removed from Rails repository
-  activemodel:
-    errors:
-      <<: *errors
-  activerecord:
-    errors:
-      messages:
-        blank: 必須入力です
