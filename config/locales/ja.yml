@@ -31,6 +31,8 @@ ja:
       message:
         approve: 購読の承認を行いました
         reject: 購読の否認を行いました
+    contents:
+      index: 動画管理画面
   cancan:
     error: 表示しようとしたページへのアクセス権限がありません
   date:
