@@ -11,7 +11,10 @@ p
   br
   = @content.description
 p
-  = raw @content.youtube_url
+  - if @content.youtube_url.present?
+    iframe width="640" height="360" src="#{@content.youtube_url}?feature=player_detailpage" frameborder="0" allowfullscreen=""
+  - else
+    = t("collections.contents.nothing")
 
 .form-actions
   = link_to t('.back', :default => t("helpers.links.back")), collection_contents_path, :class => 'btn'

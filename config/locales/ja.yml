@@ -33,6 +33,7 @@ ja:
         reject: 購読の否認を行いました
     contents:
       index: 動画管理画面
+      nothing: 動画未登録
   cancan:
     error: 表示しようとしたページへのアクセス権限がありません
   date:
