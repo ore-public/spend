@@ -1,6 +1,7 @@
 Spend::Application.routes.draw do
-  get "readable_collections/index"
-  post "readable_collections/read"
+  resources :readable_collections, only: :index do
+    post 'read'
+  end
 
   resources :collections do
     resources :contents
@@ -10,6 +11,8 @@ Spend::Application.routes.draw do
         put 'reject'
       end
     end
+
+    resources :readable_contents, only: :index
   end
 
   devise_for :users

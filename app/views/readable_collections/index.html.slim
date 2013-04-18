@@ -5,7 +5,7 @@ table.table.table-striped
 
   - @collections.each do |collection|
     tr
-      td= collection.name
+      td= link_to collection.name, collection_readable_contents_path(collection)
       td= collection.description
       - if collection.read?(current_user)
         td= collection.subscription(current_user).status.text
