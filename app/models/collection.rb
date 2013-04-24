@@ -19,7 +19,7 @@ class Collection < ActiveRecord::Base
   enumerize :approval, in: [:necessary, :unnecessary]
 
   def read?(user)
-    subscription(user)
+    subscription(user) && subscription(user).status.read?
   end
 
   def subscription(user)

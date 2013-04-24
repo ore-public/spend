@@ -1,6 +1,8 @@
 Spend::Application.routes.draw do
   resources :readable_collections, only: :index do
-    post 'read'
+    member do
+      post 'read'
+    end
   end
 
   resources :collections do
