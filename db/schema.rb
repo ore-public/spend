@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130417043910) do
+ActiveRecord::Schema.define(:version => 20130425121708) do
 
   create_table "collections", :force => true do |t|
     t.integer  "user_id"
@@ -26,9 +26,11 @@ ActiveRecord::Schema.define(:version => 20130417043910) do
     t.string   "title"
     t.text     "description"
     t.string   "youtube_url"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
     t.integer  "collection_id"
+    t.string   "youtube_embed_url"
+    t.string   "youtube_image_url"
   end
 
   create_table "subscriptions", :force => true do |t|
