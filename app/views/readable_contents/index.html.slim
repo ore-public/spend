@@ -2,8 +2,10 @@
   div
     = content.title
   div
+    = content.description
+  div
     - if content.youtube_url.present?
       - if content.youtube_image_url.present?
-        = image_tag content.youtube_image_url
+        = link_to (image_tag content.youtube_image_url), collection_readable_content_path(content.collection, content)
     - else
       = t("collections.contents.nothing")

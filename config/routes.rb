@@ -14,7 +14,7 @@ Spend::Application.routes.draw do
       end
     end
 
-    resources :readable_contents, only: :index
+    resources :readable_contents, only: [:index, :show]
   end
 
   devise_for :users
