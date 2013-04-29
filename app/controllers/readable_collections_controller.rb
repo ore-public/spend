@@ -18,6 +18,6 @@ class ReadableCollectionsController < ApplicationController
                           end
     subscription.save
 
-    redirect_to readable_collections_index_path, {notice: I18n.t('collections.message.request_read')}
+    redirect_to readable_collections_path, {notice: I18n.t('collections.message.request_read')}
   end
 end
