@@ -6,6 +6,20 @@
   div
     - if content.youtube_url.present?
       - if content.youtube_image_url.present?
-        = link_to (image_tag content.youtube_image_url), collection_readable_content_path(content.collection, content)
+        = link_to (image_tag(content.youtube_image_url, size: "320x240")), "#viewMovie#{content.id}", data: {toggle: "modal"}
     - else
       = t("collections.contents.nothing")
+
+- @contents.each do |content|
+  div.modal.hide.fade tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" id="viewMovie#{content.id}"
+    div.modal-header
+      button.close type="button" data-dismiss="modal" aria-hidden="true"
+        x
+      h3#myModalLabel
+        = content.title
+    div.modal-body
+      p
+        iframe width="640" height="360" src="#{content.youtube_embed_url}?feature=player_detailpage" frameborder="0" allowfullscreen=""
+    div.modal-footer
+       = content.description
+
