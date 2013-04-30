@@ -1,14 +1,17 @@
-- @contents.each do |content|
-  div
-    = content.title
-  div
-    = content.description
-  div
-    - if content.youtube_url.present?
-      - if content.youtube_image_url.present?
-        = link_to (image_tag(content.youtube_image_url, size: "320x240")), "#viewMovie#{content.id}", data: {toggle: "modal"}
-    - else
-      = t("collections.contents.nothing")
+ul.thumbnails
+  - @contents.each do |content|
+    li.span3
+      div.thumbnail
+        - if content.youtube_url.present?
+          - if content.youtube_image_url.present?
+            = link_to (image_tag(content.youtube_image_url, data: {src: "holder.js/300x200"})), "#viewMovie#{content.id}",\
+              data: {toggle: "modal"}
+        - else
+          = t("collections.contents.nothing")
+        h3
+          = content.title
+        p
+          = content.description
 
 - @contents.each do |content|
   div.modal.hide.fade tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" id="viewMovie#{content.id}"
