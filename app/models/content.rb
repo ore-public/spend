@@ -1,3 +1,18 @@
+# == Schema Information
+#
+# Table name: contents
+#
+#  id                :integer          not null, primary key
+#  title             :string(255)
+#  description       :text
+#  youtube_url       :string(255)
+#  created_at        :datetime         not null
+#  updated_at        :datetime         not null
+#  collection_id     :integer
+#  youtube_embed_url :string(255)
+#  youtube_image_url :string(255)
+#
+
 class Content < ActiveRecord::Base
   attr_accessible :description, :title, :youtube_url, :collection_id
   before_save :update_embed_url

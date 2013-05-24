@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: subscriptions
+#
+#  id            :integer          not null, primary key
+#  collection_id :integer
+#  user_id       :integer
+#  status        :string(255)
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#
+
 class Subscription < ActiveRecord::Base
   include Enumerize
 

@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: collections
+#
+#  id          :integer          not null, primary key
+#  user_id     :integer
+#  name        :string(255)
+#  approval    :string(255)
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  description :text
+#
+
 class Collection < ActiveRecord::Base
   include Enumerize
 

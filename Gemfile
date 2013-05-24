@@ -43,6 +43,7 @@ gem 'simple_form'
 gem 'enumerize'
 gem 'rails-i18n'
 gem 'nokogiri'
+gem 'annotate'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
