@@ -27,6 +27,7 @@ group :test do
   gem 'capybara-webkit'
   gem 'turnip'
   gem 'simplecov'
+  gem 'simplecov-rcov'
 end
 
 group :development, :test do

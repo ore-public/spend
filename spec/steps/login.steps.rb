@@ -18,4 +18,17 @@ steps_for :login do
     current_path.should == "/"
     User.first.email.should == "test@email.com"
   end
+
+  step "購読可能な作品一覧ページにアクセスする" do
+    visit '/readable_collections'
+  end
+
+  step "ログイン画面が開かれること" do
+    current_path = URI.parse(current_url).path
+    current_path.should == "/users/sign_in"
+  end
+
+  step "自分が管理している作品一覧にアクセスする" do
+    visit '/collections'
+  end
 end
