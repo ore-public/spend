@@ -26,6 +26,7 @@ group :test do
   gem 'rspec-rails'
   gem 'capybara-webkit'
   gem 'turnip'
+  gem 'simplecov'
 end
 
 group :development, :test do
