@@ -28,6 +28,9 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'sqlite3'
   gem 'rails-erd'
+  gem 'rspec-rails'
+  gem 'capybara-webkit'
+  gem 'turnip'
 end
 
 gem 'jquery-rails'
