@@ -1,4 +1,6 @@
 language: ruby
 rvm:
   - 2.0.0
-
+before_script: "cp config/database.yml.travis config/database.yml"
+env:
+  - DB=mysql
