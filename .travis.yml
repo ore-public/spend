@@ -1,6 +1,13 @@
 language: ruby
 rvm:
   - 2.0.0
-before_script: "cp config/database.yml.travis config/database.yml"
 env:
   - DB=mysql
+bundler_args: --without development --path vendor/bundle
+before_script: "cp config/database.yml.travis config/database.yml"
+script:
+  - "bundle exec rake db:drop"
+  - "bundle exec rake db:create"
+  - "bundle exec rake db:migrate"
+  - "bundle exec rake db:test:clone"
+  - "bundle exec rake spec"

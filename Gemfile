@@ -22,15 +22,18 @@ group :production do
   gem 'mysql2'
 end
 
+group :test do
+  gem 'rspec-rails'
+  gem 'capybara-webkit'
+  gem 'turnip'
+end
+
 group :development, :test do
   gem 'pry-rails'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'sqlite3'
   gem 'rails-erd'
-  gem 'rspec-rails'
-  gem 'capybara-webkit'
-  gem 'turnip'
 end
 
 gem 'jquery-rails'
