@@ -13,7 +13,7 @@ require 'turnip'
 require 'turnip/capybara'
 
 require 'simplecov'
-SimpleCov.start
+SimpleCov.start 'rails'
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
