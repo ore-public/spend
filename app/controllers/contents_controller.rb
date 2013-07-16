@@ -1,5 +1,7 @@
 class ContentsController < ApplicationController
   before_filter :authenticate_user!
+  before_filter :find_contents, only: [:show, :edit, :update, :destroy]
+
   authorize_resource
 
   # GET /contents
@@ -16,8 +18,6 @@ class ContentsController < ApplicationController
   # GET /contents/1
   # GET /contents/1.json
   def show
-    @content = current_user.collections.find(params[:collection_id]).contents.find(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @content }
@@ -37,7 +37,6 @@ class ContentsController < ApplicationController
 
   # GET /contents/1/edit
   def edit
-    @content = current_user.collections.find(params[:collection_id]).contents.find(params[:id])
   end
 
   # POST /contents
@@ -59,8 +58,6 @@ class ContentsController < ApplicationController
   # PUT /contents/1
   # PUT /contents/1.json
   def update
-    @content = current_user.collections.find(params[:collection_id]).contents.find(params[:id])
-
     respond_to do |format|
       if @content.update_attributes(params[:content])
         format.html { redirect_to collection_content_url(@content.collection_id, @content), notice: 'Content was successfully updated.' }
@@ -75,12 +72,16 @@ class ContentsController < ApplicationController
   # DELETE /contents/1
   # DELETE /contents/1.json
   def destroy
-    @content = current_user.collections.find(params[:collection_id]).contents.find(params[:id])
     @content.destroy
 
     respond_to do |format|
       format.html { redirect_to collection_contents_url(params[:collection_id]) }
       format.json { head :no_content }
     end
+  end
+
+  private
+  def find_contents
+    @content = current_user.collections.find(params[:collection_id]).contents.find(params[:id])
   end
 end
