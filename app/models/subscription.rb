@@ -11,7 +11,7 @@
 #
 
 class Subscription < ActiveRecord::Base
-  include Enumerize
+  extend Enumerize
 
   attr_accessible :collection_id, :status, :user_id
 

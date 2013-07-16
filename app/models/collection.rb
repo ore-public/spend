@@ -12,7 +12,7 @@
 #
 
 class Collection < ActiveRecord::Base
-  include Enumerize
+  extend Enumerize
 
   attr_accessible :approval, :name, :user_id, :owner, :description
 
