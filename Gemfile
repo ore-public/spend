@@ -37,6 +37,8 @@ group :development, :test do
   gem 'sqlite3'
   gem 'rails-erd'
   gem 'guard-pow'
+  gem 'hirb'
+  gem 'hirb-unicode'
 end
 
 gem 'jquery-rails'

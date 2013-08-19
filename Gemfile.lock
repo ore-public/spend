@@ -84,6 +84,10 @@ GEM
     guard-pow (1.0.0)
       guard (>= 1.1)
     hike (1.2.3)
+    hirb (0.7.1)
+    hirb-unicode (0.0.5)
+      hirb (~> 0.5)
+      unicode-display_width (~> 0.1.1)
     i18n (0.6.1)
     journey (1.0.4)
     jquery-rails (3.0.4)
@@ -225,6 +229,7 @@ GEM
     uglifier (2.1.2)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
+    unicode-display_width (0.1.1)
     warden (1.2.3)
       rack (>= 1.0)
     xpath (2.0.0)
@@ -244,6 +249,8 @@ DEPENDENCIES
   devise
   enumerize
   guard-pow
+  hirb
+  hirb-unicode
   jquery-rails
   less-rails
   mysql2
