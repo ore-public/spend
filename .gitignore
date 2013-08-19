@@ -17,3 +17,5 @@
 /config/database.yml
 /erd.pdf
 /coverage/*
+
+.powenv
