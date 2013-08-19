@@ -36,6 +36,7 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'sqlite3'
   gem 'rails-erd'
+  gem 'guard-pow'
 end
 
 gem 'jquery-rails'
