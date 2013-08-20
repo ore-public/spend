@@ -13,9 +13,6 @@ ja:
         read: 購読中
         offer: 申込中
         reject: 却下
-  controller:
-    collections:
-      title: 動画管理
   auth:
     login: ログイン
     logout: ログアウト
@@ -23,6 +20,8 @@ ja:
     contents: 講義一覧
     collections: 動画管理
     readable_collections: 動画を探す
+  readable_collections:
+    title: 動画一覧
   collections:
     read: 購読する
     message:

@@ -1,7 +1,18 @@
 ja:
   activerecord:
+    models:
+      user: ユーザー
+      collection: コレクション
+      content: 動画
+      subscription: 購読
     attributes:
       content:
-        title: 講座名
-        description: 講座詳細
-        youtube_url: 動画埋め込みコード
+        title: タイトル
+        description: 説明
+        youtube_url: Youtube URL
+      collection:
+        name: コレクション名
+        description: 説明
+        subscriptions: 購読者
+        approval: 購読の承認
+        created_at: 作成日
