@@ -29,9 +29,9 @@ html lang="ja"
           .container-fluid.nav-collapse
             ul.nav
               li= link_to t("menu.readable_collections"), readable_collections_path
+              li= link_to t("menu.mypage"), mypage_path
             ul.nav.pull-right
               - if signed_in?
-                  li= link_to t("menu.collections"), :collections
                   li.dropdown
                     a.dropdown-toggle#drop1 href="#" role="button" data-toggle="dropdown"
                       i.icon-user

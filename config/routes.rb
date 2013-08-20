@@ -1,4 +1,6 @@
 Spend::Application.routes.draw do
+  get "mypage" => "mypage#index"
+
   resources :readable_collections, only: :index do
     member do
       post 'read'

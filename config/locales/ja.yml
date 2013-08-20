@@ -20,8 +20,15 @@ ja:
     contents: 講義一覧
     collections: 動画管理
     readable_collections: 動画を探す
+    mypage: マイページ
   readable_collections:
     title: 動画一覧
+  mypage:
+    title: マイページ
+    readlist: 購読動画一覧(新着)
+    managedlist: 管理動画一覧(新着)
+    link_collections: 動画の配信設定をする
+    upgrade: 有料会員へアップグレード
   collections:
     read: 購読する
     message:

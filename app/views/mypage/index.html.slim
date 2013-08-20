@@ -1,0 +1,14 @@
+h1= t('mypage.title')
+p= link_to t('mypage.link_collections'), :collections
+= t('mypage.upgrade')
+
+div.span4
+  h2= t('mypage.readlist')
+  ul
+    - @subscliptions.each do |sub|
+      li= link_to sub.collection.name, collection_readable_contents_path(sub.collection)
+div.span4
+  h2= t('mypage.managedlist')
+  ul
+    - @managed_collections.each do |mc|
+      li= link_to mc.name, mc
