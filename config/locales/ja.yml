@@ -16,6 +16,7 @@ ja:
   auth:
     login: ログイン
     logout: ログアウト
+    sign_up: 新規会員登録
   menu:
     contents: 講義一覧
     collections: 動画管理

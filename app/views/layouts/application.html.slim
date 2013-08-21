@@ -45,7 +45,18 @@ html lang="ja"
     .container-fluid
 
       .row-fluid
-        .span12
+        .span2
+          div
+            - if signed_in?
+              = link_to t("auth.logout"), destroy_user_session_path, method: :delete, class: 'btn btn-danger'
+            - else
+              = link_to t("auth.login"), new_user_session_path, class: 'btn btn-success'
+              p OR
+            - if signed_in?
+
+            - else
+              = link_to t('auth.sign_up'), new_user_registration_path, class: 'btn btn-info'
+        .span10
           = bootstrap_flash
           = yield
     
