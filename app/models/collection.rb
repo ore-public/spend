@@ -29,7 +29,7 @@ class Collection < ActiveRecord::Base
   scope :managed, lambda{|user| where(:user_id => user)}
   scope :unmanaged, lambda{|user| where("user_id <> ?", user.id)}
 
-  enumerize :approval, in: [:necessary, :unnecessary]
+  enumerize :approval, in: [:necessary, :unnecessary], scope: true
 
   def read?(user)
     subscription(user) && subscription(user).status.read?
