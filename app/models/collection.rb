@@ -21,7 +21,6 @@ class Collection < ActiveRecord::Base
              foreign_key: 'user_id'
 
   has_many :contents
-  has_many :subscriptions
 
   validates :owner, presence: true
   validates :approval, presence: true
@@ -31,11 +30,4 @@ class Collection < ActiveRecord::Base
 
   enumerize :approval, in: [:necessary, :unnecessary], scope: true
 
-  def read?(user)
-    subscription(user) && subscription(user).status.read?
-  end
-
-  def subscription(user)
-    self.subscriptions.find_by_user_id(user)
-  end
 end

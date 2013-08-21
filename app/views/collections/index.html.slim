@@ -6,7 +6,6 @@ table class="table table-striped"
     tr
       th= model_class.human_attribute_name(:name)
       th= model_class.human_attribute_name(:description)
-      th= model_class.human_attribute_name(:subscriptions)
       th= model_class.human_attribute_name(:approval)
       th= model_class.human_attribute_name(:created_at)
       th=t '.actions', :default => t("helpers.actions")
@@ -15,7 +14,6 @@ table class="table table-striped"
       tr
         td= link_to collection.name, collection
         td= collection.description
-        td= link_to t("collections.subscriptions.index"), collection_subscriptions_path(collection)
         td= collection.approval.text
         td=l collection.created_at
         td

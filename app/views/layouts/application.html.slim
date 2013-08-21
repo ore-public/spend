@@ -28,8 +28,8 @@ html lang="ja"
           = link_to 'Spend', '/', class: 'brand'
           .container-fluid.nav-collapse
             ul.nav
-              li= link_to t("menu.readable_collections"), readable_collections_path
-              li= link_to t("menu.mypage"), mypage_path
+              - if signed_in?
+                li= link_to t("menu.mypage"), mypage_path
             ul.nav.pull-right
               - if signed_in?
                   li.dropdown
