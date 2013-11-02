@@ -9,9 +9,7 @@
 #Admin User
 User.delete_all
 u = User.new(email: "admin@super_user.com", password: "hogehoge")
-u.role = :admin
 u.save!
 
 u = User.new(email: "user@user.com", password: "fugafuga")
-u.role = :user
 u.save!

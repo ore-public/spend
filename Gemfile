@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.13'
+gem 'rails', '3.2.14'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -42,13 +42,13 @@ group :development, :test do
 end
 
 gem 'jquery-rails'
-gem "twitter-bootstrap-rails"
+gem 'twitter-bootstrap-rails'
 gem 'devise'
 gem 'cancan'
 gem 'simple_form'
-gem "rails_config"
-gem "active_decorator"
-gem "less-rails"
+gem 'rails_config'
+gem 'active_decorator'
+gem 'less-rails'
 gem 'slim-rails'
 gem 'simple_form'
 gem 'enumerize'
