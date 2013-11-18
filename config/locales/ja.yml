@@ -1,9 +1,9 @@
 ja:
   enumerize:
     collection:
-      approval:
-        necessary: 必要
-        unnecessary: 不要
+      authentication:
+        necessary: する
+        unnecessary: しない
     user:
       role:
         user: 一般ユーザー

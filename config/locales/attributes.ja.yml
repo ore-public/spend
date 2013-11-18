@@ -14,5 +14,5 @@ ja:
         name: コレクション名
         description: 説明
         subscriptions: 購読者
-        approval: 購読の承認
+        authentication: パスワード制限
         created_at: 作成日
