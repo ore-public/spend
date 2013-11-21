@@ -19,8 +19,8 @@ steps_for :login do
     User.first.email.should == "test@email.com"
   end
 
-  step "購読可能な作品一覧ページにアクセスする" do
-    visit '/readable_collections'
+  step "動画管理ページにアクセスする" do
+    visit '/collections'
   end
 
   step "ログイン画面が開かれること" do
