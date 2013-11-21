@@ -22,14 +22,6 @@ group :production do
   gem 'mysql2'
 end
 
-group :test do
-  gem 'rspec-rails'
-  gem 'capybara-webkit'
-  gem 'turnip'
-  gem 'simplecov'
-  gem 'simplecov-rcov'
-end
-
 group :development, :test do
   gem 'pry-rails'
   gem 'better_errors'
@@ -39,6 +31,13 @@ group :development, :test do
   gem 'guard-pow'
   gem 'hirb'
   gem 'hirb-unicode'
+
+  gem 'rspec-rails'
+  gem 'capybara-webkit'
+  gem 'turnip'
+  gem 'launchy'
+  gem 'simplecov'
+  gem 'simplecov-rcov'
 end
 
 gem 'jquery-rails'
