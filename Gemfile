@@ -38,6 +38,7 @@ group :development, :test do
   gem 'launchy'
   gem 'simplecov'
   gem 'simplecov-rcov'
+  gem 'spring'
 end
 
 gem 'jquery-rails'
