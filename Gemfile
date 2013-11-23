@@ -39,6 +39,7 @@ group :development, :test do
   gem 'simplecov'
   gem 'simplecov-rcov'
   gem 'spring'
+  gem 'spring-commands-rspec'
 end
 
 gem 'jquery-rails'
